@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="row">
+    <div *ngFor="let cityInfo of cityInfos" class="col col-4">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title text-center">{{ cityInfo.cityName }}</h1>
+          <p class="card-text text-center">
+            Temperature: {{ cityInfo.weatherData.main.temp }}°K
+          </p>
+          <p class="card-text text-center">
+            Weather: {{ cityInfo.weatherData.weather[0].main }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-city-search (citySearched)="onSearch($event)"></app-city-search>

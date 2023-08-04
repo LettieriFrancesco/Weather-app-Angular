@@ -1,0 +1,42 @@
+<!-- <div class="container-fluid">
+  <h1>Weather App</h1>
+  <nav>
+    <a routerLink="/">Weather List</a> |
+
+    <a *ngIf="isAuthenticated()" routerLink="/favorites">Favorites</a> |
+    <a *ngIf="!isAuthenticated()" routerLink="/login">Login</a>
+  </nav>
+
+</div> -->
+<div class="container bg">
+  <header
+    class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
+  >
+    <a
+      href="/"
+      class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+    >
+      <img
+        class="w-50"
+        src="https://www.windowsblogitalia.com/wp-content/uploads/2020/03/MSN-Meteo-per-Windows-10-nuova-icona-in-stile-Fluent-Design.png"
+        alt="logo-nav"
+      />
+      <h1 class="fw-bold text-warning">Weather App</h1>
+    </a>
+
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a
+          routerLink="/"
+          class="nav-link text-warning fw-bold"
+          aria-current="page"
+          >Weather List</a
+        >
+      </li>
+      <li class="nav-item">
+        <a routerLink="/login" class="nav-link text-warning fw-bold">Login</a>
+      </li>
+    </ul>
+  </header>
+  <router-outlet></router-outlet>
+</div>
