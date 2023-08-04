@@ -1,13 +1,31 @@
 <div class="container-fluid">
   <div class="row">
     <div *ngFor="let cityInfo of cityInfos" class="col col-4">
-      <div class="card">
+      <div class="card bg-dark d-flex justify-content-center">
+        <div class="d-flex justify-content-center">
+          <img
+            [src]="
+              'https://openweathermap.org/img/wn/' +
+              cityInfo.weatherData.weather[0].icon +
+              '@2x.png'
+            "
+            class="card-img-top img-meteo"
+            alt="logo"
+          />
+        </div>
         <div class="card-body">
-          <h1 class="card-title text-center">{{ cityInfo.cityName }}</h1>
-          <p class="card-text text-center">
-            Temperature: {{ cityInfo.weatherData.main.temp }}°K
+          <h1 class="card-title text-center text-white testo-città">
+            {{ cityInfo.cityName }}
+          </h1>
+          <p class="card-text text-center text-white">
+            Humidity:
+            {{ cityInfo.weatherData.main.humidity }}
           </p>
-          <p class="card-text text-center">
+
+          <p class="card-text text-center text-white">
+            Temperature: {{ cityInfo.weatherData.main.temp.toFixed(1) }}°C
+          </p>
+          <p class="card-text text-center text-white">
             Weather: {{ cityInfo.weatherData.weather[0].main }}
           </p>
         </div>

@@ -14,7 +14,7 @@ export class WeatherService {
   getWeatherForecasts(): Observable<any> {
     const lat = 'YOUR_LATITUDE';
     const lon = 'YOUR_LONGITUDE';
-    const url = `${this.apiUrl}?lat=${lat}&lon=${lon}&appid=${this.apiKey}`;
+    const url = `${this.apiUrl}?lat=${lat}&lon=${lon}&appid=${this.apiKey}&units=metric`;
     return this.http.get(url);
   }
 
@@ -23,12 +23,12 @@ export class WeatherService {
     stateCode: string,
     countryCode: string
   ) {
-    const url = `http://api.openweathermap.org/data/2.5/forecast?q=${cityName},${stateCode},${countryCode}&appid=${this.apiKey}`;
+    const url = `http://api.openweathermap.org/data/2.5/forecast?q=${cityName},${stateCode},${countryCode}&appid=${this.apiKey}&units=metric`;
     return this.http.get(url);
   }
 
   getCoordinates(cityName: string) {
-    const url = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${this.apiKey}`;
+    const url = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${this.apiKey}&units=metric`;
     return this.http.get<any[]>(url);
   }
 }

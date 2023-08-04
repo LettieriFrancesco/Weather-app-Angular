@@ -1,7 +1,7 @@
 <div class="container p-3">
   <div class="row">
     <div class="col col-12 d-flex flex-column mt-5">
-      <h1 class="mb-3 text-center">City Search</h1>
+      <h1 class="mb-3 text-center text-white">City Search</h1>
       <form
         class="d-flex flex-column align-items-center"
         (ngSubmit)="onSearch()"
@@ -18,8 +18,8 @@
         </div>
       </form>
       <div class="col col-4" *ngIf="weatherData">
-        <h2>Weather in {{ weatherData.name }}</h2>
-        <p>Temperature: {{ weatherData.main.temp }}°K</p>
+        <h1>Weather in {{ weatherData.name }}</h1>
+        <p>Temperature: {{ weatherData.main.temp }}°C</p>
         <p>Weather: {{ weatherData.weather[0].main }}</p>
       </div>
     </div>

@@ -17,16 +17,15 @@ import { RouterModule } from '@angular/router';
     CitySearchComponent,
     FavoritesComponent,
     LoginComponent,
-
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

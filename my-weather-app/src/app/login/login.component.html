@@ -1,16 +1,26 @@
-<h1>Login</h1>
-<form (ngSubmit)="login()">
-  <input
-    type="text"
-    [(ngModel)]="username"
-    name="username"
-    placeholder="Username"
-  />
-  <input
-    type="password"
-    [(ngModel)]="password"
-    name="password"
-    placeholder="Password"
-  />
-  <button type="submit">Login</button>
-</form>
+<h1 class="text-center text-white mb-5">Login</h1>
+<div class="container">
+  <div class="row">
+    <div class="col d-flex justify-content-center mb-5">
+      <form class="w-100" (ngSubmit)="login()">
+        <input
+          class="form-control mb-2"
+          type="text"
+          [(ngModel)]="username"
+          name="username"
+          placeholder="Username"
+        />
+        <input
+          class="form-control mb-2"
+          type="password"
+          [(ngModel)]="password"
+          name="password"
+          placeholder="Password"
+        />
+        <div>
+          <button class="btn btn-warning" type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
